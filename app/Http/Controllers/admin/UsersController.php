@@ -63,6 +63,7 @@ class UsersController extends Controller
             return redirect()->back()->with('warning', 'Cannot create name "administrator"!');
         }
         $user = new User();
+        $user->preferred_language = $request->preferred_language;
         $user->name = $request->name;
         $user->email = $request->email;
         $user->role_id = $request->role_id;

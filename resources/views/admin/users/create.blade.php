@@ -63,20 +63,19 @@ App::setLocale($locale);
                             </div>
 
                             <div class="form-group row">
-                                <label for="role_input" class="col-md-4 col-form-label text-md-right">{{ __('Role') }}</label>
-
+                                <label for="role_id" class="col-md-4 col-form-label text-md-right">{{ __('Role') }}</label>
                                 <div class="col-md-6">
-                                    <select id="role_input" style="height: 35px" name="role_id" >
-                                        <option selected value="2">user</option>
+                                    <select id="role_id" style="height: 35px" name="role_id" >
                                         @foreach ($roles as $role)
                                             <option value="{{$role->id}}">{{$role->title}}</option>
                                         @endforeach
                                     </select>
-                                    @if ($errors->has('role'))
-                                        <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('role') }}</strong>
-                                    </span>
-                                    @endif
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                {!! Form::label('preferred_language', 'preferred_language', array('class' => 'col-md-4 col-form-label text-md-right')) !!}
+                                <div class="col-md-6">
+                                    {!! Form::select('preferred_language', array('ru' => 'RU', 'en' => 'EN', 'UKR' => 'ukr'),'RU',array('style' => 'height: 35px') ) !!}
                                 </div>
                             </div>
 

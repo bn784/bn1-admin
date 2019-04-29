@@ -17,30 +17,6 @@
         </li>
         @endcan
     </ul>
-
-    <button class="bn-toggle my-button"> @lang('messages.setting')</button>
-    <ul class="nav flex-column ul-display-li" >
-        <li class="nav-item">
-            <a class="nav-link bn-button" href="{{ route('admin.roles.index') }}">@lang('messages.roles.title')</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link bn-button" href="{{ route('admin.users.index') }}">@lang('messages.users.title')</a>
-        </li>
-        <li class="nav-item">
-            <button class="bn-toggle my-button"> @lang('messages.setting')</button>
-            <ul class="nav flex-column ul-display-li" >
-                <li class="nav-item">
-                    <a class="nav-link bn-button" href="{{ route('admin.roles.index') }}">@lang('messages.roles.title')</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link bn-button" href="{{ route('admin.users.index') }}">@lang('messages.users.title')</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link bn-button" href="{{ route('admin.users.index') }}">@lang('messages.users.title')</a>
-                </li>
-                </li>
-            </ul>
-    </ul>
     @endcan
     <button class="bn-toggle my-button"> @lang('messages.preferred_language')</button>
     <ul class="nav flex-column ul-display-li ">
